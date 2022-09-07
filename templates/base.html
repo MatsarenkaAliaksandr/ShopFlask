@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    {% block title %}{% endblock %}
+</head>
+<body >
+<div class="container py-3" >
+  <header>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+          <img src="https://static.tildacdn.com/tild6564-6635-4264-a563-316562653435/Group_37164.svg" alt="IT OVERONE">
+      </a>
+
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/">Main</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/about">About</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/aboutstore">About the store</a>
+      </nav>
+        <a class="btn btn-secondary" href="/create">Add a product</a>
+    </div>
+    {% block body %}{% endblock %}
+      </header>
+
+  <div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Mane Page</a></li>
+      <li class="nav-item"><a href="/about" class="nav-link px-2 text-muted">About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="/about" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2022 IT OVERONE</p>
+  </footer>
+</div>
+</div>
+</body>
+</html>

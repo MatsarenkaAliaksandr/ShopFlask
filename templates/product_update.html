@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Update a product</title>
+{% endblock %}
+
+{% block body %}
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold">Update a product</h1>
+        <div class="form-group">
+        <form method="post">
+            <div class="form-group row">
+                <label for="title" class="col-lg-2 col-form-label col-form-label-lg">Product name</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control form-control-lg" name="title" id="title" value="{{ item.title }}"><br>
+                </div>
+                <label for="description" class="col-lg-2 col-form-label col-form-label-lg">Product description</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control form-control-lg" name="description" id="description" value="{{ item.description }}"><br>
+                </div>
+                <label for="image" class="col-lg-2 col-form-label col-form-label-lg">Url image</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control form-control-lg" name="image" id="image" value="{{ item.image }}"><br>
+                </div>
+                <label for="price" class="col-lg-2 col-form-label col-form-label-lg">Product price</label>
+                <div class="col-lg-10">
+                    <input type="number" class="form-control form-control-lg" name="price" id="price" value="{{ item.price }}"><br>
+                </div>
+                <label for="quantity" class="col-lg-2 col-form-label col-form-label-lg">Product quantity</label>
+                <div class="col-lg-10">
+                    <input type="number" class="form-control form-control-lg" name="quantity" id="quantity" value="{{ item.quantity }}"><br>
+                </div>
+                <button class="btn btn-secondary" type="submit">Edit</button><br>
+            </div>
+        </form><br>
+        </div>
+    <div class="overflow-hidden" style="max-height: 40vh;" >
+      <div class="container px-5">
+        <img src="https://thumb.tildacdn.com/tild6134-6338-4433-a230-626632383163/-/format/webp/Group_37092_1.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+      </div>
+    </div>
+  </div>
+{% endblock %}
+

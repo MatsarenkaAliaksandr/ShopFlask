@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>{{ item.id }}</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+    <div class="col">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+            <h4 class="my-0 fw-normal">{{ item.title }}</h4>
+            <h4 class="my-0 fw-normal">Quantity in stock:{{ item.quantity }}</h4>
+            <h1 class="card-title pricing-card-title">{{ item.price }}<small class="text-muted fw-light">$</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+                <li>{{ item.description }}</li>
+            </ul>
+            <div class="col">
+                <a href="/detail/{{item.id}}/delete" class="btn btn-sm btn-outline-danger">Delete</a>
+                <a class="btn btn-secondary" href="/buy/{{ item.id }}">Buy</a>
+                <a class="btn btn-secondary" href="/detail/{{item.id}}/update">Update</a>
+            </div>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+            <img src="{{ item.image }}" alt="{{ item.title }}" width="350" height="300">
+        </div>
+      </div>
+    </div>
+    </div>
+{% endblock %}

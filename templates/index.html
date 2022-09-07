@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Online store</title>
+{% endblock %}
+
+{% block body %}
+
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Online store</h1>
+      <p class="fs-5 text-muted">A list of all products on the site!</p>
+    </div>
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            {% for el in data %}
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-lg">
+                    <div class="card-header py-3">
+                        <img src="{{ el.image }}" alt="{{ el.title }}" width="350" height="300">
+                        <h4 class="my-0 fw-normal">{{ el.title }}</h4><h4 class="my-0 fw-normal">Quantity in stock:{{ el.quantity }}</h4>
+                    </div>
+                    <div class="card-body text-dark shadow-lg ">
+                         <h1 class="card-title pricing-card-title">{{ el.price }}<small class="text-muted fw-light">$</small></h1>
+                         <ul class="list-unstyled mt-3 mb-4">
+                            <li>{{ el.description[:30] }}</li>
+                         </ul>
+                        <a class="btn btn-secondary" href="/buy/{{ el.id }}">Buy</a>
+                        <a class="btn btn-secondary" href="/detail/{{el.id}}">Detail</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
